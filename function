@@ -1,0 +1,18 @@
+function sayHello(){
+    console.log('Hello');
+    console.log('--------------');
+}
+function sayHi(){
+    console.log('Hi...');
+    console.log('--------------');
+}
+function add(num1, num2, callback){
+    console.log(num1+num2);
+    callback();
+}
+add(10,20, sayHello);
+add(20,20, sayHi);
+add(50,50, function(){
+    console.log('Bye...');
+});
+
