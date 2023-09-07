@@ -1,0 +1,27 @@
+let student ={
+    firstname:"Shahid",
+    lastname: "Raja",
+    // fullname: function(){
+    //     console.log(this.firstname)
+    // }
+} 
+
+// student.fullname();
+
+let fullname= function(hometown,profile){
+        console.log(this.firstname+ " "+this.lastname+  " " +hometown+ " " +profile)
+    }
+
+fullname.call(student,"Ballai","landus");
+
+let student1 ={
+    firstname:"Shahid",
+    lastname: "RajaJi"
+}
+
+/////////Call()
+//fullname.call(student1, "Delhi");
+//fullname.apply(student1, ["Delhi","Ladchat"]); it takes argumet in arra list that the diference
+
+let printname= fullname.bind(student1,"Delhi","Ladchat");
+console.log(printname());
